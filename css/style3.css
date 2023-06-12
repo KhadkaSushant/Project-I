@@ -1,0 +1,42 @@
+section {
+    padding: 20px;
+    width: 1280px;
+    margin: 100px auto;
+}
+
+section ul {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+section ul li {
+    list-style: none;
+    background: #eee;
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointers;
+}
+section ul li.active {
+    background: #03a9f4;
+    color: #fff;
+}
+.portfolio {
+    display: flex;
+}
+
+.portfolio .itemBox {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 5px;
+}
+
+.portfolio .itemBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
