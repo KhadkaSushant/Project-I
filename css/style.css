@@ -261,6 +261,25 @@ header {
     font-weight: 400;
 }
 
+.button {
+    margin-top: 30px;
+}
+
+.button a {
+    background-color: #162816;
+    padding: 12px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.button a:hover {
+    background-color: #61a5c5;
+    color: #fff;
+}
 
 
 
