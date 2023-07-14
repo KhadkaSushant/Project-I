@@ -74,3 +74,14 @@
 .content-section .social i:hover {
     color: #61a5c5;
 }
+
+.content-section .content span {
+    color: #61a5c5;
+}
+
+.content-section .content ol li {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 1;
+}

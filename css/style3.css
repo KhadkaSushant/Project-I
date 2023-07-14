@@ -22,7 +22,7 @@ section ul li.active {
     color: #fff;
 }
 .portfolio {
-    display: flex;
+    display: block;
 }
 
 .portfolio .itemBox {
@@ -39,4 +39,21 @@ section ul li.active {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.portfolio .itemBox img:hover {
+    opacity: 60%;
+}
+.button {
+    padding: auto;
+}
+.button a {
+    background-color: #162816;
+    padding: 12px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
 }
