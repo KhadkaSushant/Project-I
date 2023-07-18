@@ -26,16 +26,16 @@
         <div class="contact_form">
             <div class="banner">
                 <h2>GET IN AND TOUCH WITH US</h2>
-                <form onsubmit="return validate()" method="post">
+                <form action="connect.php"  method="POST">
                     Name <sup style="color:red">*</sup><br>
                     <input type="text" name="name" placeholder="Name"/><br><br>
                     Email <sup style="color:red">*</sup><br>
-                    <input type="text" name="email" placeholder="Email" required/><br><br>
+                    <input type="email" name="email" placeholder="Email" required/><br><br>
                     Phone <sup style="color:red">*</sup><br>
                     <input type="text" name="phone" placeholder="Phone"/><br><br>
                     Message<br>
                     <textarea name="message" id="message" rows="5" placeholder="Write Your Message"></textarea><br><br>
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit"  class="btn" name="submit">Submit</button>
         
                     
                 </form>

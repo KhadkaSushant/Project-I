@@ -1,19 +1,15 @@
 <?php
-$db_host = "localhost";
-$db_user = "root";
-$db_password = "";
-$db_name = "interior1";
-$db_port = 3306;
+ 
+ $email = $_POST['email'];
+ $password = $_POST['password'];
+ 
 
-//Create Connection
-$data = mysqli_connect($db_host, $db_user, $db_password, $db_name, $db_port);
+$conn = mysqli_connect("localhost", "root", "", "interior") or die("connection failed");
+$sql = "INSERT INTO admin_login(username, email, password) VALUES ('{$username}','{$email}','{$password}')";
+$result = mysqli_query($conn, $sql) or die("Query Failed!");
+header("location: index.php");
 
-//Checking Connection
-if($data===false){
-    die("Connection Failed");
-}else {
-    echo"Connect";
-}
+mysqli_close($conn);
 
 
 
