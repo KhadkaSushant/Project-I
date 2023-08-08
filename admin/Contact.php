@@ -1,3 +1,17 @@
+<?php
+if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "<script>alert('Empty Query');</script>";
+    }
+    else{
+        echo "<script>alert('Your Message has been sent. The Interior designer contact you later via phone or email.');</script>";
+    }
+}
+require "../connection/connection.php";
+session_start();
+if(!empty($_SESSION['adminloginid'])){
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,55 +21,48 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     
-<body>
+<body style="background-color: #ddd;">
     
     <header>
         <img src="images/logo.png" width="150" height="100"/>
         <nav class="navigation">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="service.html">Services</a>
                 <a href="Blog.html">Blog</a>
                 <a href="About.html">About Us</a>
-                <a href="Contact.html">Contact Us</a>
+                <a href="Contact.php">Contact Us</a>
+               
+        </nav>
     </header>
-    <div class="section">
-        <div class="container">
-            <div class="content-section">
-                <div class="title">
-                    <h1>About Us</h1>
-                </div>
-                <div class="content">
-                    <h3>MAKING YOUR DREAM SPACES COME TO LIFE</h3>
-                    <p>Khadka Designs decorates your home. If you does not like the designs 
-                        on service you can give your address and contact information on <span>contact us</span> 
-                        and our interior designers contact you and get the measurements of your room and 
-                        after two three days in your email we send the some designs.  
-                    </p>
-                    <h3>Our Design Process</h3>
-                    <ol type="1">
-                        <li>Planning</li>
-                        <li>Concept Drawings</li>
-                        <li>Design Development</li>
-                        <li>Finding The Right Builders</li>
-                        <li>Design Realisation</li>
-                    </ol>
-                        <div class="button">
-                            <a href="service.html">Services</a>
-                        </div>
-                </div>
-                <div class="social">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+    
+    <section id="contact">
+       
+        <div class="contact_form">
+            <div class="banner">
+                <h2>GET IN AND TOUCH WITH US</h2>
+                <form action="../authen/backendenquiry.php"  method="POST">
+                    Name <sup style="color:red">*</sup><br>
+                    <input type="text" name="name" placeholder="Name"/><br><br>
+                    Email <sup style="color:red">*</sup><br>
+                    <input type="email" name="email" placeholder="Email" required/><br><br>
+                    Phone <sup style="color:red">*</sup><br>
+                    <input type="text" name="phone" placeholder="Phone"/><br><br>
+                    Message<br>
+                    <textarea name="message" id="message" rows="5" placeholder="Write Your Message"></textarea><br><br>
+                    <button type="submit" value="submit" id="submit" class="btn" name="submit">Submit</button>
+        
+                    
+                </form>
             </div>
-            <div class="image-section">
-                <img src="images/img.jpg">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.0635205317635!2d85.27807707216326!3d27.69684577937111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb193390243733%3A0x9e5e2c47e5ba79d2!2sGaurav%20Event!5e0!3m2!1sen!2snp!4v1686558804568!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </div>
-  
+    </section>
+    
+    
 
+    
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -96,10 +103,14 @@
         <br/>
         <p><i class="fa-regular fa-copyright fa-beat fa-xl"></i>  Copyright 2023 Khadka Design Ltd | All Rights Reserved | site by Inbound</p>
    </footer>
+   <?php
+}
+else{
+    header("location:../admin/Contact.php");
+}
+?>
     
-  
- 
- 
   <script src="js/script.js"></script>
 </body>
 </html>
+ 
