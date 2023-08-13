@@ -50,7 +50,7 @@ $row=mysqli_fetch_assoc($result);
         <label for="pid">ID</label> 
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['did']?>" name="did" placeholder="Enter ID">
+        <input type="text" value="<?php echo $row['did'];?>" name="did" placeholder="Enter ID">
       </div>
     </div>
     
@@ -58,7 +58,7 @@ $row=mysqli_fetch_assoc($result);
       <div class="col-25">
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['name']?>" name="name" placeholder="Enter Project Name">
+        <input type="text" value="<?php echo $row['name'];?>" name="name" placeholder="Enter Project Name">
       </div>
     </div>
     
@@ -67,7 +67,7 @@ $row=mysqli_fetch_assoc($result);
         
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['phone']?>" name="phone" placeholder="Enter date">
+        <input type="text" value="<?php echo $row['phone'];?>" name="phone" placeholder="Enter date">
       </div>
     </div>
     
@@ -76,7 +76,7 @@ $row=mysqli_fetch_assoc($result);
         <label for="address">Address</label>
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['address']?>" id="address" name="address" placeholder="Enter Designer Address">
+        <input type="text" value="<?php echo $row['address'];?>" id="address" name="address" placeholder="Enter Designer Address">
       </div>
     </div>
 
@@ -85,7 +85,7 @@ $row=mysqli_fetch_assoc($result);
         <label for="end_date">Description</label>
       </div>
       <div class="col-75">
-      <textarea name="description" value="<?php echo $row['description']?>" id="description" rows="5" placeholder="Write the Designer Description"></textarea>
+      <textarea name="description" value="<?php echo $row['description'];?>" id="description" rows="5" placeholder="Write the Designer Description"></textarea>
       </div>
     </div>
     

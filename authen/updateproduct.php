@@ -50,7 +50,7 @@ $row=mysqli_fetch_assoc($result);
         <label for="pid">ID</label> 
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['pid']?>" name="pid" placeholder="Enter ID">
+        <input type="text" value="<?php echo $row['pid'];?>" name="pid" placeholder="Enter ID">
       </div>
     </div>
     
@@ -58,7 +58,7 @@ $row=mysqli_fetch_assoc($result);
       <div class="col-25">
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['project_name']?>" name="project_name" placeholder="Enter Project Name">
+        <input type="text" value="<?php echo $row['project_name'];?>" name="project_name" placeholder="Enter Project Name">
       </div>
     </div>
     
@@ -67,7 +67,7 @@ $row=mysqli_fetch_assoc($result);
         
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['start_date']?>" name="start_date" placeholder="Enter date">
+        <input type="text" value="<?php echo $row['start_date'];?>" name="start_date" placeholder="Enter date">
       </div>
     </div>
 
@@ -76,14 +76,14 @@ $row=mysqli_fetch_assoc($result);
         
       </div>
       <div class="col-75">
-        <input type="text" value="<?php echo $row['end_date']?>" name="end_date" placeholder="Enter date">
+        <input type="text" value="<?php echo $row['end_date'];?>" name="end_date" placeholder="Enter date">
       </div>
     </div>
     
     
     
     <div class="row">
-      <input type="hidden" name="pid" value="<?php echo $row['pid']?>">
+      <input type="hidden" name="pid" value="<?php echo $row['pid'];?>">
       <button type="submit" value="Update" name="update">Update</button>
     </div>
   </form>

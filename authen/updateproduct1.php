@@ -7,7 +7,7 @@ if(isset($_POST['update'])){
     $end_date = $_POST['end_date'];
     
     
-    $query = "UPDATE `project` SET `project_name`='$project_name',`start_date`='$start_date',`end_date`='$end_date'";
+    $query = "UPDATE project SET project_name='$project_name',start_date='$start_date',end_date='$end_date' WHERE pid = '$id'";
     $result=mysqli_query($con,$query);
     if ($result){
         header("location:../admin/project.php?error=2");
