@@ -36,17 +36,19 @@
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="text" id="email" name="email">
                         <label>Email</label>
+                        <div class="error"></div>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                         <input type="password" id="password" name="password">
                         <label>Password</label>
+                        <div class="error"></div>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember me</label>
                         <a href="#">Forgot Password</a>
                     </div>
-                    <button type="submit" class="btn" value="login" name="login"><a href="service.html">Login</a></button>
+                    <button type="submit" class="btn" value="login" name="login">Login</button>
                     <div class="login-register">
                         <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
                     </div>
