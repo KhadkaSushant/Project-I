@@ -6,7 +6,7 @@
         $query = "DELETE FROM designer WHERE did = '$id'";
         $result = mysqli_query($con,$query);
         if ($result){
-            header("location:../admin/project.php?error=none");
+            header("location:../admin/designer.php?error=none");
         }
     }
     else

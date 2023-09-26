@@ -1,18 +1,4 @@
 <?php
-if(isset($_GET['error'])){
-    if($_GET['error'] == 1){
-        echo "<script>alert('Empty Designer');</script>";
-    }
-    elseif($_GET['error'] == 2){
-        echo "<script>alert('Designer Updated');</script>";
-    }
-    elseif($_GET['error'] == 'none'){
-        echo "<script>alert('Designer Deleted');</script>";
-    }
-    else{
-        echo "<script>alert('Designer Added');</script>";
-    }
-}
 require "../connection/connection.php";
 session_start();
 if(!empty($_SESSION['adminloginid'])){
@@ -31,7 +17,7 @@ if(!empty($_SESSION['adminloginid'])){
 </head>
 <body>
     <header class="header">
-        <h2>Admin Dashboard</h2>
+    <img src="../admin/images/admin.png" width="150" height="50"/>
         
     </header>
     <aside>
@@ -44,6 +30,9 @@ if(!empty($_SESSION['adminloginid'])){
             </li>
             <li>
                 <a href="../admin/designer.php">Manage Interior Designer</a>
+            </li>
+            <li>
+                <a href="../admin/book.php">Manage Booking</a>
             </li>
             <li>
                 <a href="../admin/enquiry.php">Manage Client</a>
@@ -106,6 +95,24 @@ if(!empty($_SESSION['adminloginid'])){
     </div>
     
     <div class="row">
+      <span id="errorblock">
+        <?php
+      if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "Please Enter The Designer Name !";
+    }
+    elseif($_GET['error'] == 2){
+        echo "Designer Updated";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "Designer Deleted";
+    }
+    else{
+        echo "Designer Added";
+    }
+}
+?>
+</span>
       <button type="submit" value="Add" name="add" id="add">Add</button>
     </div>
   </form>

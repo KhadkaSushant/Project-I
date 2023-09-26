@@ -17,7 +17,7 @@ $row=mysqli_fetch_assoc($result);
 </head>
 <body>
     <header class="header">
-        <h2>Admin Dashboard </h2>
+    <img src="../admin/images/admin.png" width="150" height="50"/>
         
     </header>
     <aside>
@@ -82,7 +82,7 @@ $row=mysqli_fetch_assoc($result);
 
     <div class="row">
       <div class="col-25">
-        <label for="end_date">Description</label>
+        <label for="description">Description</label>
       </div>
       <div class="col-75">
       <textarea name="description" value="<?php echo $row['description'];?>" id="description" rows="5" placeholder="Write the Designer Description"></textarea>

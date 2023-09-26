@@ -3,9 +3,16 @@
     margin: 0px;
     padding: 0px;
 }
+
+#errorblock{
+  margin-left:400px;
+  color:red;
+  
+}
+
 .header
 {
-    background-color: red;
+    background-color: #61a5c5;
     line-height: 70px;
     padding-left: 30px;
 }
@@ -36,7 +43,7 @@ ul li a{
     font-weight: bold;
 }
 ul li a:hover{
-    color: skyblue;
+    color: #61a5c5;
     text-decoration: none;
 }
 .content{
@@ -171,3 +178,6 @@ input[type=text], select, textarea{
     text-align: center;
   }
 
+
+
+  

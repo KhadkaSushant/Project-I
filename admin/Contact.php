@@ -28,10 +28,9 @@ if(!empty($_SESSION['adminloginid'])){
         <nav class="navigation">
                 <a href="index.php">Home</a>
                 <a href="service.html">Services</a>
-                <a href="Blog.html">Blog</a>
                 <a href="About.html">About Us</a>
                 <a href="Contact.php">Contact Us</a>
-               
+                <a href="Blog.html">Blog</a>               
         </nav>
     </header>
     

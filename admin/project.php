@@ -1,18 +1,4 @@
 <?php
-if(isset($_GET['error'])){
-    if($_GET['error'] == 1){
-        echo "<script>alert('Empty Project');</script>";
-    }
-    elseif($_GET['error'] == 2){
-        echo "<script>alert('Project Updated');</script>";
-    }
-    elseif($_GET['error'] == 'none'){
-        echo "<script>alert('Project Deleted');</script>";
-    }
-    else{
-        echo "<script>alert('Project Added');</script>";
-    }
-}
 require "../connection/connection.php";
 session_start();
 if(!empty($_SESSION['adminloginid'])){
@@ -31,7 +17,7 @@ if(!empty($_SESSION['adminloginid'])){
 </head>
 <body>
     <header class="header">
-    <h2>Admin Dashboard</h2>
+    <img src="../admin/images/admin.png" width="150" height="50"/>
     </header>
     <aside>
         <ul>
@@ -43,6 +29,9 @@ if(!empty($_SESSION['adminloginid'])){
             </li>
             <li>
                 <a href="../admin/designer.php">Manage Interior Designer</a>
+            </li>
+            <li>
+                <a href="../admin/book.php">Manage Booking</a>
             </li>
             <li>
                 <a href="../admin/enquiry.php">Manage Client</a>
@@ -59,14 +48,14 @@ if(!empty($_SESSION['adminloginid'])){
     </div>
     <div class="container">
   <form action="../authen/backendproduct.php" method="POST">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-25">
         <label for="pid">ID</label>
       </div>
       <div class="col-75">
         <input type="text" id="pid" name="pid" placeholder="Enter ID">
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="col-25">
         <label for="p_type">Design type</label>
@@ -110,7 +99,29 @@ if(!empty($_SESSION['adminloginid'])){
     </div>
     
     <div class="row">
-      <button type="submit" value="Add" name="add" id="add">Add</button>
+        
+    <span id="errorblock">
+<?php
+    if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "Please enter project name !";
+    }
+    elseif($_GET['error'] == 2){
+        echo "Project Updated";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "Project Deleted";
+    }
+    else{
+        echo "Project Added";
+    }
+}
+
+?>
+</span>
+<button type="submit" value="Add" name="add" id="add">Add</button>
+    
+
     </div>
   </form>
 </div>
@@ -120,7 +131,7 @@ if(!empty($_SESSION['adminloginid'])){
 
 <table class="center" width="50%" cellspacing="7">
   <tr>
-    <br><th>ID</th>
+    <br><th>Project ID</th>
     <th>Design Type</th>
     <th>Project Name</th>
     <th>Start Date</th>

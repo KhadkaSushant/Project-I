@@ -122,7 +122,8 @@ div.login-form form button:hover{
 
     if(isset($_POST['login']))
     {
-        $query="SELECT * from `admin_login` WHERE `admin_name`='$_POST[adminname]' AND `admin_password`='$_POST[adminpassword]'";
+        $adminpassword = md5($_POST['adminpassword']);
+        $query="SELECT * from `admin_login` WHERE `admin_name`='$_POST[adminname]' AND `admin_password`='$adminpassword'";
         $result=mysqli_query($con,$query);
         if(mysqli_num_rows($result)==1)
         {

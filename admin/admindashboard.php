@@ -17,12 +17,12 @@ if(!isset($_SESSION['adminloginid']))
 </head>
 <body>
     <header class="header">
-    <h2>Admin Dashboard</h2>
+    <img src="../admin/images/admin.png" width="150" height="50"/>
     </header>
     <aside>
         <ul>
         <li><img src="user.png" width="100" height="100"/></li>
-        <li> <span>Hello</span> <b>Admin</b></li>
+        <li> <span style="color:#61a5c5;">Hello</span> <b style="color:#61a5c5;">Admin</b></li>
             <li>
                 <a href="../admin/admindashboard.php">Dashboard</a>
             </li>
@@ -31,6 +31,9 @@ if(!isset($_SESSION['adminloginid']))
             </li>
             <li>
                 <a href="../admin/designer.php">Manage Interior Designer</a>
+            </li>
+            <li>
+                <a href="../admin/book.php">Manage Booking</a>
             </li>
             <li>
                 <a href="../admin/enquiry.php">Manage Client</a>
@@ -43,8 +46,7 @@ if(!isset($_SESSION['adminloginid']))
         </ul>
     </aside>
     <div class="content">
-        <h1 style> Welcome To The Interior Design Management System Admin</h1>
-        
+        <h1 style> Welcome To The Interior Design Management System Admin</h1><br><br>
     </div>
 
   

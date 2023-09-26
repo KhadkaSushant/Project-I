@@ -12,9 +12,10 @@
         <img src="images/logo.png" width="150" height="100"/>
         <nav class="navigation">
                 <a href="index.php">Home</a>
-                <a href="Blog.html">Blog</a>
+                <a href="service.html">Services</a>
                 <a href="About.html">About Us</a>
                 <a href="Contact.php">Contact Us</a>
+                <a href="Blog.html">Blog</a>
                 <button class="btnLogin-popup">Login</button>
         </nav>
     </header>

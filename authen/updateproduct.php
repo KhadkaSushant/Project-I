@@ -17,7 +17,7 @@ $row=mysqli_fetch_assoc($result);
 </head>
 <body>
     <header class="header">
-       <h2>Admin Dashboard </h2>
+    <img src="../admin/images/admin.png" width="150" height="50"/>
         
     </header>
     <aside>

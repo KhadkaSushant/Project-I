@@ -1,10 +1,22 @@
 <?php
+/*if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "<script>alert('Empty booking');</script>";
+    }
+    elseif($_GET['error'] == 2){
+        echo "<script>alert('Booking Updated');</script>";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "<script>alert('Booking Deleted');</script>";
+    }
+    else{
+        echo "<script>alert('Booking Added');</script>";
+    }
+}*/
 require "../connection/connection.php";
 session_start();
-if(!isset($_SESSION['adminloginid']))
-{
-    header("location:../admin/adminlogin.php");
-}
+if(!empty($_SESSION['adminloginid'])){
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +27,6 @@ if(!isset($_SESSION['adminloginid']))
     <link rel="stylesheet" type="text/css" href="../admin/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-
 </head>
 <body>
     <header class="header">
@@ -23,7 +34,7 @@ if(!isset($_SESSION['adminloginid']))
     </header>
     <aside>
         <ul>
-            <li>
+        <li>
                 <a href="../admin/admindashboard.php">Dashboard</a>
             </li>
             <li>
@@ -46,22 +57,42 @@ if(!isset($_SESSION['adminloginid']))
         </ul>
     </aside>
     <div class="content1">
-    <h1> Customer Enquiry for parts </h1>
+    <h1> Booking Designs </h1>
+    <span id="errorblock">
+        <?php
+    if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "Empty booking";
+    }
+    elseif($_GET['error'] == 2){
+        echo "Booking Updated";
+    }
+    elseif($_GET['error'] == 'none'){
+        echo "Booking Deleted";
+    }
+    else{
+        echo "Booking Added";
+    }
+}
+?>
+</span>
     </div>
-    <table class="center" width="50%" cellspacing="7">  
+    <table class="center" width="60%" cellspacing="7">  
       <tr class="heading">  
            
            <th>ID</th>  
-           <th>Client Name</th>   
+           <th>Name</th>  
            <th>Email</th>  
            <th>Phone</th>   
-           <th>Message</th>
-           <th>Action</th>
+           <th>Address</th>
+           <th>Design</th>
+           <th>Code of Design</th>
+           <th colspan="2">Action</th>
       </tr>  
       <?php
         require "../connection/connection.php";
         //$date=date("Y-m-d");
-        $query="SELECT * FROM client";
+        $query="SELECT * FROM booking";
         $result=mysqli_query($con,$query);
         while($row=mysqli_fetch_assoc($result)){
         echo "<tr>";
@@ -69,14 +100,19 @@ if(!isset($_SESSION['adminloginid']))
         echo "<td>".$row['name']."</td>";
         echo "<td>".$row['email']."</td>";
         echo "<td>".$row['phone']."</td>";
-        echo "<td>".$row['message']."</td>";
-        echo "<td><a href='../authen/deleteenquiry.php?id=".$row['id']."'><input type='submit' value='Delete' class='delete'></a></td>";
+        echo "<td>".$row['address']."</td>";
+        echo "<td>".$row['design']."</td>";
+        echo "<td>".$row['code']."</td>";
+        echo "<td><a href='../authen/deletebook.php?id=".$row['id']."'><input type='submit' value='Delete' class='delete'></a></td>";
+        echo "<td><a href='../authen/updatebook.php?id=".$row['id']."'><input type='submit' value='Update' class='update'></a></td>";
         echo "</tr>";
             }
         ?>
     </table>
-    
 
-
-</body>
-</html>
+    <?php
+}
+else{
+    header("location:../admin/admindashboard.php");
+}
+?>
