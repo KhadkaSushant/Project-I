@@ -46,10 +46,9 @@ if(!isset($_SESSION['adminloginid']))
         </ul>
     </aside>
     <div class="content">
-        <h1 style> Welcome To The Interior Design Management System Admin</h1><br><br>
+        <h1> Welcome To The Interior Design Management System Admin</h1><br><br>
     </div>
 
-  
 
 
 </body>
