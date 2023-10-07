@@ -24,6 +24,7 @@ iconClose.addEventListener('click',()=> {
 //validate email,  and password
 
 function validate(){
+
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
@@ -40,6 +41,12 @@ function validate(){
     var text;
     if(name.length < 5){
       text = "Please Enter valid Name";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+    if("^[a-zA-Z]+$".test(name)){}else{
+      text = "Please Enter alphabetic Name";
       error_message.innerHTML = text;
       return false;
     }

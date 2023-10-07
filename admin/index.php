@@ -21,7 +21,7 @@
     </header>
 
         <div class="button">
-            <h1>Khadka Designs</h1>
+            <h1>S.M Designs</h1>
          <h2 id="myHeader">Decorate Your Home <br>Where You Live</h2>
         
          <a href="service.html">See Some Designs <i class="fa-solid fa-arrow-right fa-shake fa-xl" style="color: #c3c6d1;"></i></a>
@@ -32,18 +32,16 @@
             </span>
             <div class="form-box login">
                 <h2>Login</h2>
-                <form action="connect.php" onsubmit="return validate()" method="POST">
+                <form method="POST">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
                         <input type="text" id="email" name="email">
                         <label>Email</label>
-                        <div class="error"></div>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                         <input type="password" id="password" name="password">
                         <label>Password</label>
-                        <div class="error"></div>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox">Remember me</label>
@@ -58,7 +56,7 @@
             
             <div class="form-box register">
                 <h2>Registration</h2>
-                <form action="dbconnection.php" onsubmit="return validate() method="POST">
+                <form method="POST">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
                         <input type="text" id="username" name="username">

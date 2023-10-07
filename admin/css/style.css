@@ -61,39 +61,6 @@ header {
     color: #61a5c5;   
 }
 
-.nav a {
-    position: relative;
-    font-size: 1.1em;
-    color: #162938;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-}
-
-.nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #162938;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.nav a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.nav a:hover {
-    
-    color: #61a5c5;   
-}
-
 .navigation .btnLogin-popup {
     width: 130px;
     height: 50px;
@@ -230,37 +197,6 @@ header {
     line-height: 57px;
 }
 
-.input-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-box input {
-    border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-size: 12px;
-	padding: 10px;
-	width: 100%;
-}
-
-.input-box input:focus {
-    outline: 0;
-}
-
-.input-box.success input {
-    border-color: #09c372;
-}
-
-.input-control.error input {
-    border-color: #ff3860;
-}
-.input-box .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
-
 .remember-forgot {
     font-size: .9em;
     color: #162938;
@@ -350,7 +286,3 @@ h1 {
     background-color: #61a5c5;
     color: #fff;
 }
-
-
-
-

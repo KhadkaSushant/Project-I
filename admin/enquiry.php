@@ -46,7 +46,7 @@ if(!isset($_SESSION['adminloginid']))
         </ul>
     </aside>
     <div class="content1">
-    <h1> Customer Enquiry for parts </h1>
+    <h1> Customer Enquiry </h1>
     </div>
     <table class="center" width="50%" cellspacing="7">  
       <tr class="heading">  

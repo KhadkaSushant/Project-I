@@ -83,6 +83,8 @@ if(!empty($_SESSION['adminloginid'])){
 
         Code no. of design:<br>
         <input type="text" name="code" id="code" placeholder="Code no. of design"/><br><br>
+        Date:<br>
+        <input type="date" name="date" id="date" placeholder="date"/><br><br>
             <!-- <span id="errorblock"> -->
             
             <!-- // if(isset($_GET['error'])){

@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['error'])){
     if($_GET['error'] == 1){
-        echo "<script>alert('Empty Query');</script>";
+        echo "<script>alert('Error sending message please try again later');</script>";
     }
     else{
         echo "<script>alert('Your Message has been sent. The Interior designer contact you later via phone or email.');</script>";
@@ -67,12 +67,12 @@ if(!empty($_SESSION['adminloginid'])){
         <div class="container">
             <div class="row">
                 <div class="footer-col">
-                    <h4>Khadka Designs</h4>
+                    <h4>S.M Designs</h4>
                     <ul>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="service.html">Services</a></li>
                         <li><a href="Blog.html">Blog</a></li>
-                        <li><a href="Contact.html">Contact Us</a></li>
+                        <li><a href="Contact.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -99,9 +99,7 @@ if(!empty($_SESSION['adminloginid'])){
                 </div>
             </div>
         </div>
-        <br/>
-        <br/>
-        <p><i class="fa-regular fa-copyright fa-beat fa-xl"></i>  Copyright 2023 Khadka Design Ltd | All Rights Reserved | site by Inbound</p>
+        
    </footer>
    <?php
 }
